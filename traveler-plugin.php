@@ -81,9 +81,9 @@ if ( is_admin() ) {
   require_once( TRAVELER_PLUGIN_DIR . "admin/index.php" );
   if ( !function_exists( 'traveler_plugin_admin_menu' ) ) {
     function traveler_plugin_admin_menu() {
-      add_menu_page("Traveler Plugin", "Traveler Plugin", "manage_options", 'manage_plugin', 'manage_visa', '');
-      add_submenu_page('manage_plugin', "Manage Visa", "Manage Visa", 'manage_options', 'manage_visa', 'manage_visa');
-      add_submenu_page('manage_plugin', "Manage Insurance", "Manage Insurance", 'manage_options', 'manage_insurance', 'manage_insurance');
+      add_menu_page("Traveler Plugin", "Traveler Plugin", "manage_options", 'manage_visa', 'manage_visa', '');
+      add_submenu_page('manage_visa', "Manage Visa", "Manage Visa", 'manage_options', 'manage_visa', 'manage_visa');
+      add_submenu_page('manage_visa', "Manage Insurance", "Manage Insurance", 'manage_options', 'manage_insurance', 'manage_insurance');
     }
   }
   add_action( 'admin_menu', 'traveler_plugin_admin_menu' );
