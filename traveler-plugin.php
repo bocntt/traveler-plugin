@@ -29,7 +29,7 @@ if ( !defined( 'TRAVELER_PLUGIN_URI' ) ) {
 if ( !function_exists( 'traveler_plugin_map_shortcode' ) ) {
   function traveler_plugin_map_shortcode() {
     vc_map(array(
-      "name"            => __( "ST Form Register Visa" , ST_TEXTDOMAIN ) ,
+      "name"            => __( "ST Form Register Visa" , TRAVELER_PLUGIN_TEXTDOMAIN ) ,
       "base"            => "st_form_register_visa" ,
       "content_element" => true ,
       "icon"            => "icon-st" ,
@@ -38,20 +38,20 @@ if ( !function_exists( 'traveler_plugin_map_shortcode' ) ) {
       'params'=>array(
         [
           "type"        => "textfield",
-          "heading"     => __( "Title", ST_TEXTDOMAIN ),
+          "heading"     => __( "Title", TRAVELER_PLUGIN_TEXTDOMAIN ),
           "param_name"  => "title",
           "description" => "",
         ],
         // array(
         //     'type' => 'textfield',
-        //     'heading' => esc_html__('There is no option in this element', ST_TEXTDOMAIN),
+        //     'heading' => esc_html__('There is no option in this element', TRAVELER_PLUGIN_TEXTDOMAIN),
         //     'param_name' => 'description_field',
         //     'edit_field_class' => 'vc_column vc_col-sm-12 st_vc_hidden_input'
         // )
       )
     ));
     vc_map(array(
-      "name"            => __( "ST Form Register Insurance" , ST_TEXTDOMAIN ) ,
+      "name"            => __( "ST Form Register Insurance" , TRAVELER_PLUGIN_TEXTDOMAIN ) ,
       "base"            => "st_form_register_insurance" ,
       "content_element" => true ,
       "icon"            => "icon-st" ,
@@ -60,13 +60,13 @@ if ( !function_exists( 'traveler_plugin_map_shortcode' ) ) {
       'params'=>array(
         [
           "type"        => "textfield",
-          "heading"     => __( "Title", ST_TEXTDOMAIN ),
+          "heading"     => __( "Title", TRAVELER_PLUGIN_TEXTDOMAIN ),
           "param_name"  => "title",
           "description" => "",
         ],
         // array(
         //     'type' => 'textfield',
-        //     'heading' => esc_html__('There is no option in this element', ST_TEXTDOMAIN),
+        //     'heading' => esc_html__('There is no option in this element', TRAVELER_PLUGIN_TEXTDOMAIN),
         //     'param_name' => 'description_field',
         //     'edit_field_class' => 'vc_column vc_col-sm-12 st_vc_hidden_input'
         // )

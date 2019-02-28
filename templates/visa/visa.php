@@ -159,7 +159,7 @@
                 </div>
               </div>
               <div class="alert form_alert hidden"></div>
-              <a href="#" onclick="return false" class="btn btn-primary btn-register-visa-submit btn-st-big "><?php _e( 'Submit', ST_TEXTDOMAIN ) ?></a>
+              <a href="#" onclick="return false" class="btn btn-primary btn-register-visa-submit btn-st-big "><?php _e( 'Submit', TRAVELER_PLUGIN_TEXTDOMAIN ) ?></a>
             </div>
           </form>
         </div>
