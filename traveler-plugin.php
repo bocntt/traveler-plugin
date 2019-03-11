@@ -90,14 +90,17 @@ if ( is_admin() ) {
 }
 
 function traveler_plugin_script() {
-  wp_enqueue_script( 'traveler-plugin-js', TRAVELER_PLUGIN_URI . 'traveler-plugin.js', [ 'jquery', 'jquery-ui-datepicker' ], null, true );
+  wp_enqueue_style( 'traveler-plugin-jquery-ui-css', TRAVELER_PLUGIN_URI. '/jquery-ui.min.css' );
+  wp_enqueue_script( 'traveler-jquery-ui-js', TRAVELER_PLUGIN_URI . 'jquery-ui.js', [ 'jquery' ], null, true );
+  wp_enqueue_script( 'traveler-plugin-js', TRAVELER_PLUGIN_URI . 'traveler-plugin.js', [ 'jquery', 'traveler-jquery-ui-js' ], null, true );
 }
 add_action('wp_enqueue_scripts', 'traveler_plugin_script');
 
 if (is_admin()) {
   function traveler_plugin_admin_script() {
-    wp_enqueue_style( 'traveler-plugin-jquery-ui.theme.min.css', TRAVELER_PLUGIN_URI. '/jquery-ui.min.css' );
-    wp_enqueue_script( 'traveler-plugin-admin-js', TRAVELER_PLUGIN_URI . 'traveler-plugin-admin.js', [ 'jquery', 'jquery-ui-datepicker' ], null, true );
+    wp_enqueue_style( 'traveler-plugin-jquery-ui-css', TRAVELER_PLUGIN_URI. '/jquery-ui.min.css' );
+    wp_enqueue_script( 'traveler-jquery-ui-js', TRAVELER_PLUGIN_URI . 'jquery-ui.js', [ 'jquery' ], null, true );
+    wp_enqueue_script( 'traveler-plugin-admin-js', TRAVELER_PLUGIN_URI . 'traveler-plugin-admin.js', [ 'jquery', 'traveler-jquery-ui-js' ], null, true );
   }
   add_action('admin_enqueue_scripts', 'traveler_plugin_admin_script');
 }

@@ -32,7 +32,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                       <label for="birth_day"><?php esc_attr_e("Birthday", TRAVELER_PLUGIN_TEXTDOMAIN) ?></label>
-                      <input type="text" class="form-control required traveler_plugin_date" value="" name="birth_day" id="birth_day" placeholder="<?php esc_attr_e("Birthday", TRAVELER_PLUGIN_TEXTDOMAIN) ?>">
+                      <input type="text" class="form-control required traveler_plugin_date" value="" name="birth_day" id="birth_day" placeholder="<?php esc_attr_e("mm/dd/yyyy", TRAVELER_PLUGIN_TEXTDOMAIN) ?>">
                     </div>
                 </div>
                 <div class="col-sm-6">

@@ -286,7 +286,7 @@ if ( $task == "list" ) {
                     <tr>
                       <td><label for="birth_day"><?php esc_html_e('Birth Day', TRAVELER_PLUGIN_TEXTDOMAIN ); ?></label></td>
                       <td>
-                        <input class="regular-text traveler_plugin_date" type="text" name="birth_day" id="birth_day" value="<?php echo esc_attr( isset($insurance_data['birth_day']) ? $insurance_data['birth_day'] : "" ); ?>" placeholder="<?php esc_attr_e("mm/dd/yyyy", TRAVELER_PLUGIN_TEXTDOMAIN) ?>">
+                        <input class="regular-text traveler_plugin_date" type="text" name="birth_day" id="birth_day" value="<?php echo esc_attr( isset($insurance_data['birth_day']) ? date('m/d/Y', strtotime($insurance_data['birth_day'])) : "" ); ?>" placeholder="<?php esc_attr_e("mm/dd/yyyy", TRAVELER_PLUGIN_TEXTDOMAIN) ?>">
                       </td>
                     </tr>
                     <tr>
@@ -350,13 +350,13 @@ if ( $task == "list" ) {
                     <tr>
                       <td><label for="date_of_travel"><?php esc_html_e('Date of travel', TRAVELER_PLUGIN_TEXTDOMAIN ); ?></label></td>
                       <td>
-                        <input class="regular-text traveler_plugin_date" type="text" name="date_of_travel" id="date_of_travel" value="<?php echo esc_attr( isset($insurance_data['date_of_travel']) ? $insurance_data['date_of_travel'] : "" ); ?>" placeholder="<?php esc_attr_e("mm/dd/yyyy", TRAVELER_PLUGIN_TEXTDOMAIN) ?>">
+                        <input class="regular-text traveler_plugin_date" type="text" name="date_of_travel" id="date_of_travel" value="<?php echo esc_attr( isset($insurance_data['date_of_travel']) ? date('m/d/Y', strtotime($insurance_data['date_of_travel'])) : "" ); ?>" placeholder="<?php esc_attr_e("mm/dd/yyyy", TRAVELER_PLUGIN_TEXTDOMAIN) ?>">
                       </td>
                     </tr>
                     <tr>
                       <td><label for="date_of_return"><?php esc_html_e('Date of return', TRAVELER_PLUGIN_TEXTDOMAIN ); ?></label></td>
                       <td>
-                        <input class="regular-text traveler_plugin_date" type="text" name="date_of_return" id="date_of_return" value="<?php echo esc_attr( isset($insurance_data['date_of_return']) ? $insurance_data['date_of_return'] : "" ); ?>" placeholder="<?php esc_attr_e("mm/dd/yyyy", TRAVELER_PLUGIN_TEXTDOMAIN) ?>">
+                        <input class="regular-text traveler_plugin_date" type="text" name="date_of_return" id="date_of_return" value="<?php echo esc_attr( isset($insurance_data['date_of_return']) ? date('m/d/Y', strtotime($insurance_data['date_of_return'])) : "" ); ?>" placeholder="<?php esc_attr_e("mm/dd/yyyy", TRAVELER_PLUGIN_TEXTDOMAIN) ?>">
                       </td>
                     </tr>
                     <tr>

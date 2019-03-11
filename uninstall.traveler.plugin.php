@@ -17,7 +17,7 @@ function detete_traveler_insurance_table_sql() {
   return $sql;
 }
 
-// $wpdb->query( detete_traveler_visa_table_sql() );
-// $wpdb->query( detete_traveler_insurance_table_sql() );
+$wpdb->query( detete_traveler_visa_table_sql() );
+$wpdb->query( detete_traveler_insurance_table_sql() );
 
 ?>

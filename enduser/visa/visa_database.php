@@ -60,7 +60,7 @@ if ( !class_exists( 'user_visa_database' ) ) {
       $first_name = isset( $item_obj['first_name'] ) ? trim( $item_obj['first_name'] ) : "";
       $middle_name = isset( $item_obj['middle_name'] ) ? trim( $item_obj['middle_name'] ) : "";
       $last_name = isset( $item_obj['last_name'] ) ? trim( $item_obj['last_name'] ) : "";
-      $birth_day = isset( $item_obj['birth_day'] ) ? trim( $item_obj['birth_day'] ) : "0000-00-00";
+      $birth_day = isset( $item_obj['birth_day'] ) ? date('Y-m-d', strtotime(trim( $item_obj['birth_day'] ))) : "0000-00-00";
       $gender = isset( $item_obj['gender'] ) ? trim( $item_obj['gender'] ) : "";
       $email = isset( $item_obj['email'] ) ? trim( $item_obj['email'] ) : "";
       $place_of_birth = isset( $item_obj['place_of_birth'] ) ? trim( $item_obj['place_of_birth'] ) : "";

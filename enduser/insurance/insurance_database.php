@@ -59,7 +59,7 @@ if ( !class_exists( 'user_insurance_database' ) ) {
       $table_name = $wpdb->prefix . $this->get_table_name();
       $first_name = isset( $item_obj['first_name'] ) ? trim( $item_obj['first_name'] ) : "";
       $last_name = isset( $item_obj['last_name'] ) ? trim( $item_obj['last_name'] ) : "";
-      $birth_day = isset( $item_obj['birth_day'] ) ? trim( $item_obj['birth_day'] ) : "0000-00-00";
+      $birth_day = isset( $item_obj['birth_day'] ) ? date('Y-m-d', strtotime(trim( $item_obj['birth_day'] ))) : "0000-00-00";
       $gender = isset( $item_obj['gender'] ) ? trim( $item_obj['gender'] ) : "";
       $address = isset( $item_obj['address'] ) ? trim( $item_obj['address'] ) : "";
       $phone_number = isset( $item_obj['phone_number'] ) ? trim( $item_obj['phone_number'] ) : "";
@@ -69,8 +69,8 @@ if ( !class_exists( 'user_insurance_database' ) ) {
       $role = isset( $item_obj['role'] ) ? trim( $item_obj['role'] ) : "";
       $number_partner = isset( $item_obj['number_partner'] ) ? (int) trim( $item_obj['number_partner'] ) : "";
       $number_vacation = isset( $item_obj['number_vacation'] ) ? (int) trim( $item_obj['number_vacation'] ) : "";
-      $date_of_travel = isset( $item_obj['date_of_travel'] ) ? trim( $item_obj['date_of_travel'] ) : "";
-      $date_of_return = isset( $item_obj['date_of_return'] ) ? trim( $item_obj['date_of_return'] ) : "";
+      $date_of_travel = isset( $item_obj['date_of_travel'] ) ? date('Y-m-d', strtotime(trim( $item_obj['date_of_travel'] ))) : "";
+      $date_of_return = isset( $item_obj['date_of_return'] ) ? date('Y-m-d', strtotime(trim( $item_obj['date_of_return'] ))) : "";
       $region = isset( $item_obj['region'] ) ? trim( $item_obj['region'] ) : "";
       $country_to_visited = isset( $item_obj['country_to_visited'] ) ? trim( $item_obj['country_to_visited'] ) : "";
 

@@ -18,7 +18,6 @@ jQuery(document).ready(function ($) {
             for (var i = 0; i < data.length; ++i) {
                 dataobj[data[i].name] = data[i].value
             }
-            console.log(dataobj);
             var validate = st_validate_checkout(me);
             if (!validate)
                 return !1;

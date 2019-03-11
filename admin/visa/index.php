@@ -304,7 +304,7 @@ if ( $task == "list" ) {
                     <tr>
                       <td><label for="birth_day"><?php esc_html_e('Birth Day', TRAVELER_PLUGIN_TEXTDOMAIN ); ?></label></td>
                       <td>
-                        <input class="regular-text traveler_plugin_date" type="text" name="birth_day" id="birth_day" value="<?php echo esc_attr( isset($visa_data['birth_day']) ? $visa_data['birth_day'] : "" ); ?>" placeholder="<?php esc_attr_e("mm/dd/yyyy", TRAVELER_PLUGIN_TEXTDOMAIN) ?>">
+                        <input class="regular-text traveler_plugin_date" type="text" name="birth_day" id="birth_day" value="<?php echo esc_attr( isset($visa_data['birth_day']) ? date('m/d/Y', strtotime($visa_data['birth_day'])) : "" ); ?>" placeholder="<?php esc_attr_e("mm/dd/yyyy", TRAVELER_PLUGIN_TEXTDOMAIN) ?>">
                       </td>
                     </tr>
                     <tr>

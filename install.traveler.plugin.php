@@ -30,6 +30,7 @@ function create_traveler_visa_table_sql() {
     `city` varchar(250) NOT NULL,
     `zip_code` varchar(250) NOT NULL,
     `country` varchar(250) NOT NULL,
+    `date_added` datetime NOT NULL,
     PRIMARY KEY (`visa_id`),
     UNIQUE KEY `visa_id` (`visa_id`)
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
